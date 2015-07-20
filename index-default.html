@@ -987,10 +987,10 @@
 				{name: "Styled Map"});
 
 				var mapCanvas = document.getElementById('map');
-				var nevada = new google.maps.LatLng(39.2621799, -121.0168816);
+				var queceb = new google.maps.LatLng(-19.93350, -43.99769);
 				var mapOptions = {
-				   zoom: 15,
-				   center: nevada,
+				   zoom: 14,
+				   center: queceb,
 				   mapTypeControlOptions: {
 				   mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
 				  },
@@ -1006,7 +1006,7 @@
 				// To add the marker to the map, use the 'map' property
 				  var image = 'images/icon/map_icon.png';
 				  var marker = new google.maps.Marker({
-					  position: nevada,
+					  position: queceb,
 					  map: map,
 					  icon: image
 				  });
