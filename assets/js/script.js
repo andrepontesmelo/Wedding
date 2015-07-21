@@ -80,10 +80,10 @@ $("#count-down").TimeCircles(
      bg_width: 1,
      fg_width: 0.03,
      time: {
-          Days: { color: "#fefeee" },
-          Hours: { color: "#fefeee" },
-          Minutes: { color: "#fefeee" },
-          Seconds: { color: "#fefeee" }
+          Dias: { color: "#fefeee" },
+          Horas: { color: "#fefeee" },
+          Minutos: { color: "#fefeee" },
+          Segundos: { color: "#fefeee" }
       }
    }
 );
@@ -95,10 +95,10 @@ $(".pink #count-down").TimeCircles(
      bg_width: 1,
      fg_width: 0.03,
      time: {
-          Days: { color: "#fefeee" },
-          Hours: { color: "#fefeee" },
-          Minutes: { color: "#fefeee" },
-          Seconds: { color: "#fefeee" }
+          Dias: { color: "#fefeee" },
+          Horas: { color: "#fefeee" },
+          Minutos: { color: "#fefeee" },
+          Segundos: { color: "#fefeee" }
       }
    }
 );
@@ -110,10 +110,10 @@ $(".greyscale #count-down").TimeCircles(
      bg_width: 1,
      fg_width: 0.03,
      time: {
-          Days: { color: "#ffffff" },
-          Hours: { color: "#ffffff" },
-          Minutes: { color: "#ffffff" },
-          Seconds: { color: "#ffffff" }
+          Dias: { color: "#ffffff" },
+          Horas: { color: "#ffffff" },
+          Minutos: { color: "#ffffff" },
+          Segundos: { color: "#ffffff" }
       }
    }
 );
@@ -125,10 +125,10 @@ $(".greyscale #count-down").TimeCircles(
          bg_width: .0000001,
          fg_width: .0000001,
          time: {
-              Days: { color: "#fefeee" },
-              Hours: { color: "#fefeee" },
-              Minutes: { color: "#fefeee" },
-              Seconds: { color: "#fefeee" }
+              Dias: { color: "#fefeee" },
+              Horas: { color: "#fefeee" },
+              Minutos: { color: "#fefeee" },
+              Segundos: { color: "#fefeee" }
           }
        }
     );

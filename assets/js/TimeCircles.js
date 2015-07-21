@@ -70,18 +70,18 @@
         }
     }
 
-    var allUnits = ["Days", "Hours", "Minutes", "Seconds"];
+    var allUnits = ["Dias", "Horas", "Minutos", "Segundos"];
     var nextUnits = {
-        Seconds: "Minutes",
-        Minutes: "Hours",
-        Hours: "Days",
-        Days: "Years"
+        Segundos: "Minutos",
+        Minutos: "Horas",
+        Horas: "Dias",
+        Dias: "Years"
     };
     var secondsIn = {
-        Seconds: 1,
-        Minutes: 60,
-        Hours: 3600,
-        Days: 86400,
+        Segundos: 1,
+        Minutos: 60,
+        Horas: 3600,
+        Dias: 86400,
         Months: 2678400,
         Years: 31536000
     };
@@ -207,7 +207,7 @@
                 else oldUnits = Math.ceil(oldUnits);
             }
             
-            if (unit !== "Days") {
+            if (unit !== "Dias") {
                 curUnits = curUnits % maxUnits;
                 oldUnits = oldUnits % maxUnits;
             }
@@ -283,10 +283,10 @@
             prev_time: null,
             drawn_units: [],
             text_elements: {
-                Days: null,
-                Hours: null,
-                Minutes: null,
-                Seconds: null
+                Dias: null,
+                Horas: null,
+                Minutos: null,
+                Segundos: null
             },
             attributes: {
                 canvas: null,
@@ -298,10 +298,10 @@
             },
             state: {
                 fading: {
-                    Days: false,
-                    Hours: false,
-                    Minutes: false,
-                    Seconds: false
+                    Dias: false,
+                    Horas: false,
+                    Minutos: false,
+                    Segundos: false
                 }
             }
         };
@@ -318,7 +318,7 @@
     TC_Instance.prototype.addTime = function(seconds_to_add) {
         if(this.data.attributes.ref_date instanceof Date) {
             var d = this.data.attributes.ref_date;
-            d.setSeconds(d.getSeconds() + seconds_to_add);
+            d.setSegundos(d.getSegundos() + seconds_to_add);
         }
         else if(!isNaN(this.data.attributes.ref_date)) {
             this.data.attributes.ref_date += (seconds_to_add * 1000);
@@ -762,7 +762,7 @@
         this.data.total_duration = this.config.total_duration;
         if (typeof this.data.total_duration === "string") {
             if (typeof secondsIn[this.data.total_duration] !== "undefined") {
-                // If set to Years, Months, Days, Hours or Minutes, fetch the secondsIn value for that
+                // If set to Years, Months, Dias, Hours or Minutos, fetch the secondsIn value for that
                 this.data.total_duration = secondsIn[this.data.total_duration];
             }
             else if (this.data.total_duration === "Auto") {
@@ -778,7 +778,7 @@
             else {
                 // If it's a string, but neither of the above, user screwed up.
                 this.data.total_duration = secondsIn["Years"];
-                console.error("Valid values for TimeCircles config.total_duration are either numeric, or (string) Years, Months, Days, Hours, Minutes, Auto");
+                console.error("Valid values for TimeCircles config.total_duration are either numeric, or (string) Years, Months, Dias, Hours, Minutos, Auto");
             }
         }
     };
@@ -813,24 +813,24 @@
         use_top_frame: false,
         start_angle: 0,
         time: {
-            Days: {
+            Dias: {
                 show: true,
-                text: "Days",
+                text: "Dias",
                 color: "#FC6"
             },
-            Hours: {
+            Horas: {
                 show: true,
-                text: "Hours",
+                text: "Horas",
                 color: "#9CF"
             },
-            Minutes: {
+            Minutos: {
                 show: true,
-                text: "Minutes",
+                text: "Minutos",
                 color: "#BFB"
             },
-            Seconds: {
+            Segundos: {
                 show: true,
-                text: "Seconds",
+                text: "Segundos",
                 color: "#F99"
             }
         }
